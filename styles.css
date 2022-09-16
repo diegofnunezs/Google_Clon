@@ -27,9 +27,9 @@ body{
     display: grid;
     grid-template-areas:
     "header--navbar"
-    "main--logo"
-    "footer--about";
-    grid-template-rows: 10% 89% 1%;
+    "main--content"
+    "footer--about" "footer--privacy";
+    grid-template-rows: 10% 89%  1%;
     grid-template-columns: auto ;
 }
 
@@ -39,14 +39,27 @@ body{
     justify-content: flex-end;
     flex-direction: row;
     padding: 5px;
+    margin-right: 25px;
 }
+.header--navbar a{
+    margin-left: 15px;
+}
+
 main{
     display: flex;
     justify-content: center;    
     align-items: center; 
-    flex-direction: column;
+    flex-direction: column;    
+    text-align: center;
 }
+
+.main--content {
+    margin-bottom: 25px;
+}
+
 footer{
+    display: flex;
+    flex-direction: column;
     color: #70757a;
 }
 .footer--about  {
@@ -62,3 +75,27 @@ button {
 .footer--privacy{
     grid-area: footer--privacy;
 }
+
+.main--input{
+    margin: 0 auto;
+    justify-content: center;    
+    width: 500px;
+}
+
+.main--input :hover{
+    box-shadow: 2px 6px 7px 0px rgba(0,0,0,0.75);
+}
+
+.main--input--container {
+    margin: 0 auto;
+    justify-content: center;    
+    border: 2px solid #B0B0B0;
+    border-radius: 50px;
+    width: 350px;
+    padding: 4px;
+}
+.main--input--container input{
+    outline: none;
+    border: none;
+    width: 280px;
+} 
